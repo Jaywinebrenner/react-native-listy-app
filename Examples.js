@@ -14,6 +14,12 @@ const App = () => {
           style={styles.imageOne}
           />
 
+          <Icon
+          name='remove'
+          size={20}
+          color='firebrick'
+          />
+
     </View>
 
 

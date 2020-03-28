@@ -7,11 +7,11 @@ import ListItem from './components/ListItem';
 const App = ({item}) => {
 
   const [items, setItems] = useState([
-    {id: 1, text: 'Milk'},
-    {id: 2, text: 'Eggs'},
-    {id: 3, text: 'Pain'},
-    {id: 4, text: 'Yak Leg'},
-    {id: 5, text: 'Cheese'}
+    {id: '1', text: 'Milk'},
+    {id: '2', text: 'Eggs'},
+    {id: '3', text: 'Pain'},
+    {id: '4', text: 'Yak Leg'},
+    {id: '5', text: 'Cheese'}
 
   ])
 
@@ -19,7 +19,10 @@ const App = ({item}) => {
   return (
 
     <View style={styles.container}>
-      <Text>HWAT?</Text>
+      <Image
+        source={{uri: './assets/Fonts/Feather.ttf'}}
+        style={styles.image}
+        />
         <Header
           title='Its me Margaret'
           />
@@ -27,7 +30,6 @@ const App = ({item}) => {
           data={items}
           renderItem={ ({item}) => <ListItem item = {item}/> }
           />
-
 
 
     </View>

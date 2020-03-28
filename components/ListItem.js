@@ -1,7 +1,8 @@
 
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import Icon from 'react-native-vector-icon/dist/FontAwesome'
+import { AntDesign } from '@expo/vector-icons';
+
 
 const ListItem = ({ item }) => {
 
@@ -10,12 +11,7 @@ const ListItem = ({ item }) => {
     <TouchableOpacity style={styles.header}>
       <View style={styles.listItemView}>
         <Text style={styles.listItemText}>{ item.text}</Text>
-        <Icon
-        name='remove'
-        size={20}
-        color='firebrick'
-        />
-
+        <AntDesign name='closecircle' size={30} color='firebrick'/>
       </View>
     </TouchableOpacity>
   )
