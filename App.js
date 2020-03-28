@@ -2,7 +2,7 @@
 import React, {useState} from 'react';
 import { View, Text, StyleSheet, Image, FlatList } from 'react-native';
 import Header from './components/Header';
-// import ListItem from './components/ListItem';
+import ListItem from './components/ListItem';
 
 const App = ({item}) => {
 
@@ -25,7 +25,7 @@ const App = ({item}) => {
           />
         <FlatList
           data={items}
-          renderItem={ ({item}) => <Text>{item.text}</Text> }
+          renderItem={ ({item}) => <ListItem item = {item}/> }
           />
 
 
@@ -41,7 +41,8 @@ const styles = StyleSheet.create({
 
   container: {
     flex: 1,
-    padding: 60
+    paddingTop: 60
+
   },
   image: {
     width: 100,
