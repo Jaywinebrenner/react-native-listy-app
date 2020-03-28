@@ -1,17 +1,11 @@
 
-import React, {useState} from 'react';
+import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
 
-const Header = (props) => {
-  const [items, setItems] = useState([
-    {id: Math.random(), text: 'Milk'},
-    {id: Math.random(), text: 'Eggs'},
-    {id: Math.random(), text: 'Pain'},
-    {id: Math.random(), text: 'Yak Leg'},
-    {id: Math.random(), text: 'Cheese'}
 
-  ])
+
+const Header = (props) => {
 
   return (
 

@@ -1,8 +1,20 @@
-import React from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
-import Header from './components/Header'
 
-const App = () => {
+import React, {useState} from 'react';
+import { View, Text, StyleSheet, Image, FlatList } from 'react-native';
+import Header from './components/Header';
+// import ListItem from './components/ListItem';
+
+const App = ({item}) => {
+
+  const [items, setItems] = useState([
+    {id: 1, text: 'Milk'},
+    {id: 2, text: 'Eggs'},
+    {id: 3, text: 'Pain'},
+    {id: 4, text: 'Yak Leg'},
+    {id: 5, text: 'Cheese'}
+
+  ])
+
 
   return (
 
@@ -11,11 +23,11 @@ const App = () => {
         <Header
           title='Its me Margaret'
           />
-          <Image
-            source={{uri: 'https://randomuser.me/api/portraits/men/5.jpg'}}
-            style={styles.image}
+        <FlatList
+          data={items}
+          renderItem={ ({item}) => <Text>{item.text}</Text> }
+          />
 
-            />
 
 
     </View>
