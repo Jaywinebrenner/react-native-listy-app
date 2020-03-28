@@ -8,15 +8,17 @@ const ListItem = ({ item, deleteItem }) => {
 
   return (
 
-    <TouchableOpacity style={styles.header}>
+    <TouchableOpacity style={styles.listItem}>
       <View style={styles.listItemView}>
-        <Text style={styles.listItemText}>{ item.text}</Text>
+        <Text style={styles.listItemText}>
+        {item.text}
         <AntDesign
         name='closecircle'
         size={30}
         color='firebrick'
         onPress={() => deleteItem(item.id)}
         />
+        </Text>
       </View>
     </TouchableOpacity>
   )
@@ -24,24 +26,24 @@ const ListItem = ({ item, deleteItem }) => {
 
 const styles = StyleSheet.create({
 
-  header: {
-    height: 80,
+  listItem: {
+
     padding: 15,
-    backgroundColor: '#d4ebd0'
+    backgroundColor: '#f8f8f8',
+    borderColor: '#eee',
+    borderBottomWidth: 1
   },
 
   listItemView: {
-    color: '#fff',
-    fontSize: 15,
-    textAlign: 'center',
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    alignItems: 'center'
 
   },
   listItemText: {
-    color: '#084177',
+
     fontSize: 18,
-    textAlign: 'center'
+
   }
 
 });
