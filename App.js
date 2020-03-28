@@ -15,17 +15,22 @@ const App = ({item}) => {
 
   ])
 
+  const deleteItem = (id) => {
+    setItems(prevItems => {
+      return prevItems.filter(item => item.id != id)
+    })
+  }
 
   return (
 
     <View style={styles.container}>
 
         <Header
-          title='Its me Margaret'
+          title='Its me Shopping'
           />
         <FlatList
           data={items}
-          renderItem={ ({item}) => <ListItem item = {item}/> }
+          renderItem={ ({item}) => <ListItem item = {item} deleteItem = {deleteItem}/> }
           />
 
 
