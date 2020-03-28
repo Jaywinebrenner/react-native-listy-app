@@ -15,11 +15,12 @@ const App = ({item}) => {
 
   ])
 
-  const deleteItem = (id) => {
-    setItems(prevItems => {
-      return prevItems.filter(item => item.id != id)
-    })
-  }
+const deleteItem = (id) => {
+  setItems(prevItems => {
+    return prevItems.filter(item => item.id != id)
+  })
+}
+
 
   return (
 
@@ -30,7 +31,7 @@ const App = ({item}) => {
           />
         <FlatList
           data={items}
-          renderItem={ ({item}) => <ListItem item = {item} deleteItem = {deleteItem}/> }
+          renderItem={ ({item}) => <ListItem item = {item} deleteItem= {deleteItem}/>}
           />
 
 

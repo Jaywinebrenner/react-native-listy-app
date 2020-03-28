@@ -11,7 +11,7 @@ const Header = (props) => {
 
     <View style={styles.header}>
 
-        <Text style={styles.textOne}>Are you There GodD?</Text>
+        <Text style={styles.textOne}>Are you There God?</Text>
         <Text style={styles.textTwo}> {props.title}</Text>
 
 
