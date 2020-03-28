@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet,Image } from 'react-native';
 
 
 
@@ -11,9 +11,9 @@ const Header = (props) => {
 
     <View style={styles.header}>
 
+
         <Text style={styles.textOne}>Are you There God?</Text>
         <Text style={styles.textTwo}> {props.title}</Text>
-
 
     </View>
   )
@@ -25,7 +25,8 @@ const styles = StyleSheet.create({
   header: {
     height: 80,
     padding: 15,
-    backgroundColor: '#084177'
+    backgroundColor: '#084177',
+
   },
   textOne: {
     color: '#fff',
@@ -37,6 +38,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
     textAlign: 'center'
   }
+
 
 });
 

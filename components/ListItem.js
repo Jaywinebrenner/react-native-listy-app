@@ -12,13 +12,14 @@ const ListItem = ({ item, deleteItem }) => {
       <View style={styles.listItemView}>
         <Text style={styles.listItemText}>
         {item.text}
+       </Text>
         <AntDesign
         name='closecircle'
         size={30}
         color='firebrick'
         onPress={() => deleteItem(item.id)}
         />
-        </Text>
+
       </View>
     </TouchableOpacity>
   )

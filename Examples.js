@@ -74,7 +74,7 @@ const App = () => {
         <Text> It's me Maragret.</Text>
         <Image
           source={{uri: 'https://randomuser.me/api/portraits/men/5.jpg'}}
-          style={styles.imageOne}
+          style={styles.image}
           />
 
           <Icon
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     color: 'darkslateblue'
   },
-  imageOne: {
+  image: {
     width: 100,
     height: 100,
     borderRadius: 50
